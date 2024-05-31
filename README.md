@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Todo-App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Todo application built with React. It allows users to add, edit, delete, and mark tasks as complete. The application also persists data in local storage.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add new tasks: Quickly add new tasks to your todo list.
+- Edit existing tasks: Modify tasks as needed.
+- Delete tasks: Remove tasks that are no longer needed.
+- Mark tasks as complete/incomplete: Easily toggle the completion status of tasks.
+- Persist tasks in local storage: All tasks are saved in the browser's local storage, so they remain even after refreshing the page.
 
-### `npm start`
+## Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- TodoWrapper: Manages the state of the todo list and renders the list of todos.
+- TodoForm: Form to add new tasks.
+- EditTodoForm: Form to edit existing tasks.
+- Todo: Component to display individual tasks.
+- TodoWrapperLocalStorage: An extended version of TodoWrapper with local storage integration.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup and Installation
 
-### `npm test`
+1. Clone the repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+      git clone https://github.com/yourusername/todo-app.git
+   cd todo-app
+   
 
-### `npm run build`
+2. Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      npm install
+   
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Run the application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+      npm start
+   
 
-### `npm run eject`
+   The application will run on http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Add a Task
+   - Enter a task in the input field and click the "Add Task" button.
+   - The new task will appear in the list of todos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Edit a Task
+   - Click the "Edit" button next to a task.
+   - Modify the task in the input field that appears and click the "Update Task" button.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Delete a Task
+   - Click the "Delete" button next to a task to remove it from the list.
 
-## Learn More
+4. Mark a Task as Complete/Incomplete
+   - Click the "Complete" button next to a task to toggle its completion status.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Local Storage Integration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The TodoWrapperLocalStorage component extends the functionality of TodoWrapper by saving the todos in local storage. This ensures that the tasks persist even after the browser is refreshed or closed.
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- src/components
+  - Todo.js: Displays individual tasks with options to edit, delete, or mark as complete.
+  - TodoForm.js: Form to add new tasks.
+  - EditTodoForm.js: Form to edit existing tasks.
+  - TodoWrapper.js: Manages the state and renders the list of todos.
+  - TodoWrapperLocalStorage.js: Extends TodoWrapper with local storage integration.
 
-### Analyzing the Bundle Size
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React: A JavaScript library for building user interfaces.
+- uuid: For generating unique IDs for tasks.
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the repository.
+2. Create your feature branch (git checkout -b feature/fooBar).
+3. Commit your changes (git commit -am 'Add some fooBar').
+4. Push to the branch (git push origin feature/fooBar).
+5. Create a new Pull Request.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
